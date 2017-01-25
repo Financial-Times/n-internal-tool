@@ -36,6 +36,8 @@ module.exports = options => {
 		options
 	}));
 
+	app.use('/' + meta.name, nExpress.static(meta.directory + '/public', { redirect: false }));
+
 	return app;
 }
 
