@@ -1,0 +1,23 @@
+{
+  "name": "@financial-times/n-internal-tool",
+  "version": "1.0.0",
+  "description": "Simple wrapper around n-express to create a simple, internal web based tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Financial-Times/n-internal-tool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Financial-Times/n-internal-tool/issues"
+  },
+  "homepage": "https://github.com/Financial-Times/n-internal-tool#readme",
+  "dependencies": {
+    "@financial-times/n-express": "^18.1.2",
+    "@financial-times/n-handlebars": "^1.16.1"
+  }
+}
