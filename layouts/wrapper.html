@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8">
+		<title>{{#title}}{{{this}}}{{/title}}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			html, body {margin: 0; padding: 0;}
+		</style>
+		<link rel="stylesheet" href="//www.ft.com/__origami/service/build/v2/bundles/css?modules=o-header-services@^1.1.0">
+		<link rel="stylesheet" href="//{{__name}}/main.css">
+		{{#outputBlock 'head'}}{{/outputBlock}}
+	</head>
+	<body>
+		{{>header}}
+		{{{body}}}
+		<script src="//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-header-services@^1.1.0&amp;autoinit=1"></script>
+		<script src="//{{__name}}/main.js"></script>
+	</body>
+</html>

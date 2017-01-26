@@ -1,0 +1,65 @@
+{{#with header}}
+<header class="o-header-services" data-o-component="o-header">
+	<div class="o-header-services__top o-header-services__container">
+		<div class="o-header-services__hamburger">
+			<a class="o-header-services__hamburger-icon" href="#o-header-drawer" aria-controls="o-header-drawer"><span class="o-header__visually-hidden">Menu</span></a>
+		</div>
+		<div class="o-header-services__ftlogo"></div>
+		<div class="o-header-services__title">
+			<h1 class="o-header-services__product-name"><a href="/">{{serviceName}}</a></h1><span class="o-header-subrand__product-tagline">{{#tagLine}}{{{this}}}{{/tagLine}}</span>
+		</div>
+		{{#if relatedContent}}
+		<div class="o-header-services__related-content">
+			{{#each relatedContent}}
+			<a class="o-header-services__related-content-link" href="{{href}}">{{text}}</a>
+			{{/each}}
+		</div>
+		{{/if}}
+	</div>
+	{{#if primaryNav}}
+	<div class="o-header-services__primary-nav">
+		<div class="o-header-services__container">
+			<ul class="o-header-services__nav-list">
+				{{#each primaryNav}}
+				<li class="o-header-services__nav-item">
+					<a class="o-header-services__nav-link o-header-services__nav-link--selected" href="{{href}}">{{text}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	{{/if}}
+</header>
+<div class="o-header__drawer--services o-header__drawer o--if-js" id="o-header-drawer" data-o-header-drawer="" data-o-header-drawer--no-js="">
+	<div class="o-header__drawer-inner">
+		<div class="o-header__drawer-tools">
+			<span>{{serviceName}}</span>
+			<button type="button" class="o-header__drawer-tools-close" aria-controls="o-header-drawer">
+				<span class="o-header__visually-hidden">Close</span>
+			</button>
+		</div>
+		{{#if primaryNav}}
+		<nav class="o-header__drawer-menu o-header__drawer-menu--primary" role="navigation" aria-label="Primary navigation">
+			<ul class="o-header__drawer-menu-list">
+				{{#each primaryNav}}
+				<li class="o-header__drawer-menu-item">
+					<a class="o-header__drawer-menu-link" href="{{href}}">{{text}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</nav>
+		{{/if}}
+		{{#if relatedContent}}
+		<nav class="o-header__drawer-menu o-header__drawer-menu--user" role="navigation" aria-label="User navigation">
+			<ul class="o-header__drawer-menu-list">
+				{{#each relatedContent}}
+				<li class="o-header__drawer-menu-item">
+					<a class="o-header__drawer-menu-link" href="{{href}}">{{text}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</nav>
+		{{/if}}
+	</div>
+</div>
+{{/with}}

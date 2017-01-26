@@ -6,6 +6,7 @@ const handlebars = function ({app, directory, options}) {
 	const viewsDirectory = options.viewsDirectory || '/views';
 	const partialsDir = [
 		directory + viewsDirectory + '/partials',
+		path.join(__dirname, 'layouts/partials')
 	];
 
 	if (options.partialsDirectory) {
