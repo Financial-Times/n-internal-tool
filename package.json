@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/n-internal-tool",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Simple wrapper around n-express to create a simple, internal web based tool",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,9 @@
     "@financial-times/n-express": "^18.1.2",
     "@financial-times/n-handlebars": "^1.16.1",
     "s3o-middleware": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "lintspaces-cli": "^0.6.0"
   }
 }
