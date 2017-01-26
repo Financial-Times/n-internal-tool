@@ -1,2 +1,42 @@
 # n-internal-tool
-Simple wrapper around n-express to create a simple, internal web based tool
+Simple nodejs server intended for internal, web-based tools
+
+## Introducing
+* n-express - next's standard issue server, with error-handling, metrics, utility endpoints (e.g. /__about) and healthchecks built in
+* n-handlebars - handlebarsjs with a few additional helpers introduced by next
+* o-header-services - origami header for non user-facing websites
+* s3o-middleware - integrate with FT's single sign on by default
+
+## options
+
+- options.viewsDirectory - directory containing your handlebars views (default `/views`)
+- options.partialsDirectory - array of directories containing your handlebars partials (default `/views/partials`)
+- options.defaultLayout - name of the default layout to use (default `false`)
+- options.layoutsDir - directory containing your handlebars layouts (default `/node_modules/n-internal-tool/layouts`)
+- options.helpers - map of handlebars helpers
+- options.systemCode - system code for the app
+- options.healthchecks - array of healthchecks for the app (see n-express for details)
+- options.s3o - whether to use single sign-on middleware (default `true`)
+
+
+## Data model
+To render the header and nav set `app.locals.header` or `res.locals.header` to an object matching this structure:
+```
+{
+	serviceName: 'Next code ombudsman',
+	tagLine: 'As defined in section a), subsection 3biii',
+	primaryNav: [
+		{
+			href: 'http://ft.com',
+			text: 'next site'
+		}
+	],
+	relatedContent: [
+		{
+			href: 'http://ft.com/signIn',
+			text: 'sign in'
+		}
+	]
+}
+
+```

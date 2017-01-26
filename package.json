@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Financial-Times/n-internal-tool#readme",
   "dependencies": {
     "@financial-times/n-express": "^18.1.2",
-    "@financial-times/n-handlebars": "^1.16.1"
+    "@financial-times/n-handlebars": "^1.16.1",
+    "s3o-middleware": "^1.8.0"
   }
 }

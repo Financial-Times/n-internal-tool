@@ -1,13 +1,16 @@
 const nExpress = require('@financial-times/n-express');
 const nHandlebars = require('@financial-times/n-handlebars');
+const authS3O = require('s3o-middleware');
+
 const path = require('path');
 
 const handlebars = function ({app, directory, options}) {
 	const viewsDirectory = options.viewsDirectory || '/views';
 	const partialsDir = [
-		directory + viewsDirectory + '/partials',
-		path.join(__dirname, 'layouts/partials')
+		directory + viewsDirectory + '/partials'
 	];
+
+	partialsDir.unshift(path.join(__dirname, 'layouts/partials'));
 
 	if (options.partialsDirectory) {
 		partialsDir.push(options.partialsDirectory);
@@ -38,7 +41,9 @@ module.exports = options => {
 	}));
 
 	app.use('/' + meta.name, nExpress.static(meta.directory + '/public', { redirect: false }));
-
+	if (options.s3o !== false) {
+		app.use(authS3O);
+	}
 	return app;
 }
 
