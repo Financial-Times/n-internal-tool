@@ -42,7 +42,12 @@ module.exports = options => {
 
 	app.use('/' + meta.name, nExpress.static(meta.directory + '/public', { redirect: false }));
 	if (options.s3o !== false) {
-		app.use(authS3O);
+		app.use((req, res, next) => {
+			if (req.url.indexOf('/__') === 0) {
+				next()
+			}
+			authS3O(req, res, next)
+		});
 	}
 	// to avoid errors
 	app.locals.origami = {};
