@@ -36,7 +36,17 @@ To render the header and nav set `app.locals.header` or `res.locals.header` to a
 			href: 'http://ft.com/signIn',
 			text: 'sign in'
 		}
-	]
+	],
+}
+
+```
+
+To include additional origami components via the build service set an object like the following as `app.locals.origami`
+
+```
+{
+	css: 'module1@x.y.z,module2@x.y.z',
+	js: 'module1@x.y.z,module2@x.y.z'
 }
 
 ```

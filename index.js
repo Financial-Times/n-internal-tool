@@ -44,6 +44,8 @@ module.exports = options => {
 	if (options.s3o !== false) {
 		app.use(authS3O);
 	}
+	// to avoid errors
+	app.locals.origami = {};
 	return app;
 }
 
