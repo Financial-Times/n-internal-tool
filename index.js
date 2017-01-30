@@ -49,6 +49,9 @@ module.exports = options => {
 			authS3O(req, res, next)
 		});
 	}
+
+	app.locals.__name = meta.name;
+
 	// to avoid errors
 	app.locals.origami = {};
 	return app;
