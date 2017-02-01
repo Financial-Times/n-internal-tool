@@ -45,8 +45,9 @@ module.exports = options => {
 		app.use((req, res, next) => {
 			if (req.url.indexOf('/__') === 0) {
 				next()
+			} else {
+				authS3O(req, res, next)
 			}
-			authS3O(req, res, next)
 		});
 	}
 
