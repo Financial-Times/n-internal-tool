@@ -53,6 +53,8 @@ module.exports = options => {
 
 	app.locals.__name = meta.name;
 
+	app.locals.__docTitle = options.docTitle || null;
+
 	// to avoid errors
 	app.locals.origami = {};
 	return app;
