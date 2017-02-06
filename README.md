@@ -1,14 +1,15 @@
 # n-internal-tool
 Simple nodejs server intended for internal, web-based tools
 
+
 ## Introducing
 * n-express - next's standard issue server, with error-handling, metrics, utility endpoints (e.g. /__about) and healthchecks built in
 * n-handlebars - handlebarsjs with a few additional helpers introduced by next
 * o-header-services - origami header for non user-facing websites
 * s3o-middleware - integrate with FT's single sign on by default
 
-## options
 
+## options
 - options.viewsDirectory - directory containing your handlebars views (default `/views`)
 - options.partialsDirectory - array of directories containing your handlebars partials (default `/views/partials`)
 - options.defaultLayout - name of the default layout to use (default `false`)
@@ -50,3 +51,7 @@ To include additional origami components via the build service set an object lik
 }
 
 ```
+
+
+## Custom document title
+In the server of your own app, assign a string value to `res.locals.title`, which will be picked up within `n-internal-tools`'s' `<head>` tags and displayed in the browser tab.
