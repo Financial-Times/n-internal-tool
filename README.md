@@ -54,4 +54,4 @@ To include additional origami components via the build service set an object lik
 
 
 ## Custom document title
-In the server of your own app, assign a string value to `res.locals.title`, which will be picked up within `n-internal-tools`'s `<head>` tags and displayed in the browser tab.
+In the server of your own app, assign a string value to `res.locals.title`, which will be picked up within `n-internal-tool`'s `<head>` tags and displayed in the browser tab.
