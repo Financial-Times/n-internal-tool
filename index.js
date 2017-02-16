@@ -29,10 +29,7 @@ const handlebars = function ({app, directory, options}) {
 module.exports = options => {
 	options = options || {};
 
-	const {app, meta, addInitPromise} = nExpress.getAppContainer({
-		systemCode: options.systemCode,
-		healthChecks: options.healthchecks || []
-	})
+	const {app, meta, addInitPromise} = nExpress.getAppContainer(options)
 
 	addInitPromise(handlebars({
 		app,
