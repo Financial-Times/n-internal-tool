@@ -4,7 +4,8 @@
   "description": "Simple wrapper around n-express to create a simple, internal web based tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "commit-wizard"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,15 @@
     "s3o-middleware": "^1.8.0"
   },
   "devDependencies": {
+    "@financial-times/n-gage": "^1.1.4",
     "eslint": "^3.14.1",
     "lintspaces-cli": "^0.6.0"
+  },
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "node_modules/.bin/secret-squirrel"
+      ]
+    }
   }
 }
