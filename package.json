@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "commit-wizard"
+    "precommit": "node_modules/.bin/secret-squirrel",
+    "prepush": "make verify -j3"
   },
   "repository": {
     "type": "git",
@@ -18,20 +19,13 @@
   },
   "homepage": "https://github.com/Financial-Times/n-internal-tool#readme",
   "dependencies": {
-    "@financial-times/n-express": "^19.0.1",
-    "@financial-times/n-handlebars": "^1.16.1",
+    "@financial-times/n-express": "^19.2.2",
+    "@financial-times/n-handlebars": "^1.17.9",
     "s3o-middleware": "^1.8.0"
   },
   "devDependencies": {
-    "@financial-times/n-gage": "^1.1.4",
-    "eslint": "^3.14.1",
+    "@financial-times/n-gage": "^1.8.16",
+    "eslint": "^4.1.1",
     "lintspaces-cli": "^0.6.0"
-  },
-  "config": {
-    "pre-git": {
-      "pre-commit": [
-        "node_modules/.bin/secret-squirrel"
-      ]
-    }
   }
 }
