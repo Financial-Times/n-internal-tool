@@ -1,6 +1,6 @@
 const nExpress = require('@financial-times/n-express');
 const nHandlebars = require('@financial-times/n-handlebars');
-const authS3O = require('s3o-middleware');
+const authS3O = require('@financial-times/s3o-middleware');
 
 const path = require('path');
 
