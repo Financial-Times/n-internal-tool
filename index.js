@@ -18,6 +18,7 @@ const handlebars = function ({app, directory, options}) {
 
 	return nHandlebars(app, {
 		partialsDir,
+		extname: options.extname || '.html',
 		defaultLayout: options.defaultLayout || false,
 		layoutsDir: options.layoutsDir || path.join(__dirname, 'layouts'),
 		helpers: options.helpers || {},

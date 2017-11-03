@@ -10,14 +10,15 @@ Simple nodejs server intended for internal, web-based tools
 
 
 ## options
-- options.viewsDirectory - directory containing your handlebars views (default `/views`)
-- options.partialsDirectory - array of directories containing your handlebars partials (default `/views/partials`)
-- options.defaultLayout - name of the default layout to use (default `false`)
-- options.layoutsDir - directory containing your handlebars layouts (default `/node_modules/n-internal-tool/layouts`)
-- options.helpers - map of handlebars helpers
-- options.systemCode - system code for the app
-- options.healthchecks - array of healthchecks for the app (see n-express for details)
-- options.s3o - whether to use single sign-on middleware (default `true`)
+- `options.viewsDirectory` - directory containing your handlebars views (default `/views`)
+- `options.partialsDirectory` - array of directories containing your handlebars partials (default `/views/partials`)
+- `options.defaultLayout` - name of the default layout to use (default `false`)
+- `options.layoutsDir` - directory containing your handlebars layouts (default `/node_modules/n-internal-tool/layouts`)
+- `options.helpers` - map of handlebars helpers
+- `options.systemCode` - system code for the app
+- `options.healthchecks` - array of healthchecks for the app (see n-express for details)
+- `options.s3o` - whether to use single sign-on middleware (default `true`)
+- `options.extname` - file extension of files to use as handlebars templates (default: `'.html'`)
 
 
 ## Data model
