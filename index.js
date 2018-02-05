@@ -59,3 +59,4 @@ module.exports = options => {
 module.exports.Router = nExpress.Router;
 module.exports.static = nExpress.static;
 module.exports.metrics = nExpress.metrics;
+module.exports.authS3O = authS3O;
