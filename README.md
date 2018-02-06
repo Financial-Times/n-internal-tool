@@ -9,7 +9,7 @@ Simple nodejs server intended for internal, web-based tools
 * s3o-middleware - integrate with FT's single sign on by default
 
 
-## options
+## Options
 - `options.viewsDirectory` - directory containing your handlebars views (default `/views`)
 - `options.partialsDirectory` - array of directories containing your handlebars partials (default `/views/partials`)
 - `options.defaultLayout` - name of the default layout to use (default `false`)
@@ -20,6 +20,16 @@ Simple nodejs server intended for internal, web-based tools
 - `options.s3o` - whether to use single sign-on middleware (default `true`)
 - `options.extname` - file extension of files to use as handlebars templates (default: `'.html'`)
 
+
+## Modules
+* `Router` - Next's Express router
+* `static` - common static data
+* `metrics` - Next metrics
+* `authS3O` - FT's single sign as middleware
+
+```js
+import authS3O from `@financial-times/n-internal-tool`;
+```
 
 ## Data model
 To render the header and nav set `app.locals.header` or `res.locals.header` to an object matching this structure:
