@@ -13,7 +13,8 @@ const handlebars = function ({app, directory, options}) {
 	partialsDir.unshift(path.join(__dirname, 'layouts/partials'));
 
 	if (options.partialsDirectory) {
-		partialsDir.push(options.partialsDirectory);
+		options.partialsDirectory = Array.isArray(options.partialsDirectory) ? options.partialsDirectory : [options.partialsDirectory];
+		options.partialsDirectory.forEach(dir => partialsDir.push(dir));
 	}
 
 	return nHandlebars(app, {
