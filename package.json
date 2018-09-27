@@ -25,7 +25,7 @@
     "@financial-times/s3o-middleware": "^2.0.4"
   },
   "devDependencies": {
-    "@financial-times/2.0.4": "^1.8.16",
+    "@financial-times/n-gage": "^2.0.4",
     "eslint": "^4.1.1",
     "lintspaces-cli": "^0.6.0"
   }
