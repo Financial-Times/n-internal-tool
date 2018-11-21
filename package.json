@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/Financial-Times/n-internal-tool#readme",
   "dependencies": {
-    "@financial-times/n-express": "^19.19.4",
+    "@financial-times/n-express": "^19.20.2",
     "@financial-times/n-handlebars": "^1.19.1",
     "@financial-times/s3o-middleware": "^2.0.4"
   },
   "devDependencies": {
-    "@financial-times/n-gage": "^2.0.4",
+    "@financial-times/n-gage": "^2.2.0",
     "eslint": "^4.1.1",
     "lintspaces-cli": "^0.6.0"
   }
