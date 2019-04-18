@@ -22,7 +22,7 @@
   "dependencies": {
     "@financial-times/n-express": "^19.20.2",
     "@financial-times/n-handlebars": "^1.19.1",
-    "@financial-times/s3o-middleware": "^2.0.4"
+    "@financial-times/s3o-middleware": "^3.0.1"
   },
   "devDependencies": {
     "@financial-times/n-gage": "^3.6.0",
