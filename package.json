@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "node_modules/.bin/secret-squirrel",
     "prepush": "make verify -j3",
-    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg"
+    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@financial-times/n-gage": "^3.6.0",
     "eslint": "^4.1.1",
-    "lintspaces-cli": "^0.6.0"
+    "lintspaces-cli": "^0.6.0",
+    "snyk": "^1.167.2"
   }
 }
