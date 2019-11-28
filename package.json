@@ -22,11 +22,11 @@
   "homepage": "https://github.com/Financial-Times/n-internal-tool#readme",
   "dependencies": {
     "@financial-times/n-express": "^19.21.4",
-    "@financial-times/n-handlebars": "^1.19.1",
+    "@financial-times/n-handlebars": "^2.0.0",
     "@financial-times/s3o-middleware": "^3.0.0"
   },
   "devDependencies": {
-    "@financial-times/n-gage": "^3.6.0",
+    "@financial-times/n-gage": "^3.12.0",
     "eslint": "^4.1.1",
     "lintspaces-cli": "^0.6.0",
     "snyk": "^1.167.2"
