@@ -6,7 +6,6 @@ Simple nodejs server intended for internal, web-based tools
 * n-express - next's standard issue server, with error-handling, metrics, utility endpoints (e.g. /__about) and healthchecks built in
 * n-handlebars - handlebarsjs with a few additional helpers introduced by next
 * o-header-services - origami header for non user-facing websites
-* s3o-middleware - integrate with FT's single sign on by default
 
 
 ## Options
@@ -17,7 +16,6 @@ Simple nodejs server intended for internal, web-based tools
 - `options.helpers` - map of handlebars helpers
 - `options.systemCode` - system code for the app
 - `options.healthchecks` - array of healthchecks for the app (see n-express for details)
-- `options.s3o` - whether to use single sign-on middleware (default `true`)
 - `options.extname` - file extension of files to use as handlebars templates (default: `'.html'`)
 
 
@@ -25,10 +23,9 @@ Simple nodejs server intended for internal, web-based tools
 * `Router` - Next's Express router
 * `static` - common static data
 * `metrics` - Next metrics
-* `authS3O` - FT's single sign as middleware
 
 ```js
-import authS3O from `@financial-times/n-internal-tool`;
+import express from `@financial-times/n-internal-tool`;
 ```
 
 ## Data model
