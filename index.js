@@ -1,5 +1,5 @@
 const nExpress = require('@financial-times/n-express');
-const nHandlebars = require('@financial-times/n-handlebars');
+const extendedHandlebars = require('./handlebars/express-handlebars');
 const path = require('path');
 
 const handlebars = function ({app, directory, options}) {
@@ -15,7 +15,7 @@ const handlebars = function ({app, directory, options}) {
 		options.partialsDirectory.forEach(dir => partialsDir.push(dir));
 	}
 
-	return nHandlebars(app, {
+	return extendedHandlebars(app, {
 		partialsDir,
 		extname: options.extname || '.html',
 		defaultLayout: options.defaultLayout || false,
