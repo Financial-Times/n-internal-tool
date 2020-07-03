@@ -1,6 +1,10 @@
 # n-internal-tool
 Simple nodejs server intended for internal, web-based tools
 
+## Deprecated
+
+Do not use `n-internal-tool` in new projects. Migrate away to use standalone `express` and the templating language you need in future.
+
 
 ## Introducing
 * n-express - next's standard issue server, with error-handling, metrics, utility endpoints (e.g. /__about) and healthchecks built in
