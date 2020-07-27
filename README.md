@@ -8,7 +8,7 @@ Do not use `n-internal-tool` in new projects. Migrate away to use standalone `ex
 
 ## Introducing
 * n-express - next's standard issue server, with error-handling, metrics, utility endpoints (e.g. /__about) and healthchecks built in
-* express-handlebars with a few additional helpers
+* express-handlebars with a few additional helpers and optimization in the loading of partials
 * o-header-services - origami header for non user-facing websites
 
 
