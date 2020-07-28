@@ -2,12 +2,12 @@
 
 const fs = require('fs');
 const path = require('path');
-const denodeify = require('denodeify');
+const promisify = require('util').promisify;
 
-const readdirAsync = denodeify(fs.readdir);
-const lstatAsync = denodeify(fs.lstat);
-const realpathAsync = denodeify(fs.realpath);
-const exists = denodeify(fs.exists, function (doesExists) { return [undefined, doesExists]; });
+const readdirAsync = promisify(fs.readdir);
+const lstatAsync = promisify(fs.lstat);
+const realpathAsync = promisify(fs.realpath);
+const exists = promisify(fs.exists, function (doesExists) { return [undefined, doesExists]; });
 
 const flatten = function (list) {
 	return list.reduce(function (acc, it) {

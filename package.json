@@ -22,8 +22,8 @@
   "homepage": "https://github.com/Financial-Times/n-internal-tool#readme",
   "dependencies": {
     "@financial-times/n-express": "^19.21.4",
+    "@financial-times/n-image": "^6.0.0",
     "dateformat": "^3.0.3",
-    "denodeify": "^1.2.1",
     "express-handlebars": "^5.1.0",
     "handlebars": "^4.7.6"
   },
