@@ -8,7 +8,7 @@ const loadPartials = require('./load-partials');
 
 const nextifyHandlebars = function (options) {
 	if (!options || !options.directory) {
-		throw 'n-handlebars requires an options object containing a directory property';
+		throw 'n-internal-tool handlebars requires an options object containing a directory property';
 	}
 	const configuredHandlebars = handlebars({
 		helpers: options.helpers
@@ -47,7 +47,7 @@ const nextifyHandlebars = function (options) {
 
 const applyToExpress = function (app, options) {
 	if (!app) {
-		throw 'n-handlebars requires an instance of an express app';
+		throw 'n-internal-tool handlebars requires an instance of an express app';
 	}
 
 	return nextifyHandlebars(options)
