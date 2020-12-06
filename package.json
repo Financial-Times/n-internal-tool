@@ -28,7 +28,7 @@
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
-    "@financial-times/n-gage": "^3.12.0",
+    "@financial-times/n-gage": "^8.0.0",
     "eslint": "^4.1.1",
     "lintspaces-cli": "^0.6.0",
     "snyk": "^1.167.2"
