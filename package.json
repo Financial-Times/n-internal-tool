@@ -36,5 +36,8 @@
       "pre-commit": "node_modules/.bin/secret-squirrel",
       "pre-push": "make verify -j3"
     }
+  },
+  "volta": {
+    "node": "16.14.0"
   }
 }
